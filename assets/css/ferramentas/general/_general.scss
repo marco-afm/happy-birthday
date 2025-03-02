@@ -1,0 +1,148 @@
+@import '../mixins/mixins';
+
+// Cores*
+$preto: #111111;
+$texto: #777777;
+$cinzaClaro: #f1f1f1;
+$branco: #ffffff;
+$roxo: #750089;
+$rosa: #db00ff;
+$amarelo: #ffde00;
+$bege: #a48f00;
+$azulEscuro: #00486b;
+$azulClaro: #0085c7;
+$vermelhoEscuro: #620000;
+$vermelho: #c70000;
+
+// Fontes*
+$ft-titulo: "Coiny", serif;
+$ft-texto: "Poppins", serif;
+
+// Reset*
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: lighten($preto, 5%);
+    color: $preto;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+}
+
+.rowReverse {
+    flex-direction: row-reverse !important;
+}
+
+
+// Títulos e Textos*
+.pageTitle {
+    font: 700 2rem $ft-titulo;
+    text-transform: uppercase;
+    height: 2.5rem;
+}
+
+.contentTitle {
+    font: 700 1.5rem $ft-titulo;
+}
+
+.text {
+    font: 400 1rem $ft-texto;
+    color: $texto;
+}
+
+.textLink {
+    font: 700 1rem $ft-texto;
+    text-transform: uppercase;
+}
+
+
+// Container*
+.container {
+    width: 965px;
+    margin: 0 auto;
+    padding: 2.68rem;
+}
+
+
+// Botão "Próximo"*
+.btnProximo {
+    @include flexAlignContent(row, center, center, 0);
+    @include size(200px, 50px);
+    background-color: $preto;
+    border-radius: .5rem;
+    color: $branco;
+    letter-spacing: 1px;
+}
+
+
+// Botão "Volta ao Topo"*
+.caixaBtnVoltaAoTopo {
+    @include flexAlignContent(row, center, center, 0);
+    width: 100%;
+    
+    transition: ease-in-out 2s;
+    position: fixed;
+    top: -100%;
+    z-index: 10;
+
+    &.visivel {
+        top: 1rem;
+    }
+
+    .btnVoltaAoTopo {
+        width: fit-content;
+        padding: .25rem .75rem;
+        margin: 0 auto;
+        
+        text-decoration: none;
+        font: 700 .75rem $ft-texto;
+        background-color: #ffffff40;
+        border-radius: 99px;
+        color: $preto;
+        transition: .33s;
+        box-shadow: 0px 0px 5px 1px #ffffff;
+
+        &:hover {
+            background-color: #ffffff80;
+        }
+    }
+}
+
+
+// Botão "Abrir"*
+.modalAbrir {
+    @include flexAlignContent(row, center, center, 0);
+    @include size(100%, 100%);
+    background-color: $preto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .btnAbrir {
+        width: fit-content;
+        padding: 1rem 3rem;
+        background-color: $roxo;
+        border: none;
+        border-radius: .5rem;
+        margin: 0 auto;
+
+        transition: .33s;
+        font: 700 2rem $ft-texto;
+        text-transform: uppercase;
+        color: $branco;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: inset 0px 0px 33px 0 $rosa;
+        }
+    }
+}
