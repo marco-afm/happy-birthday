@@ -1,6 +1,6 @@
 // document.addEventListener("DOMContentLoaded", function() {
     const audioFundo = document.getElementById("audioFundo");
-    const btnAbrir = document.querySelector(".btnAbrir");
+    const btnAbrir = document.getElementById("btnAbrir");
     
     btnAbrir.addEventListener("click", function() {
         if (audioFundo.paused) {
