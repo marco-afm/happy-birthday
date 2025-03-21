@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
     const audioFundo = document.getElementById("audioFundo");
-    audioFundo.paused();
+    const btnAbrir = document.querySelector(".btnAbrir");
     
-    audioFundo.addEventListener("click", function() {
+    btnAbrir.addEventListener("click", function() {
         if (audio.paused) {
             audio.play();
         }
     });
-});
+// });
