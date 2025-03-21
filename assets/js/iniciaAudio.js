@@ -3,8 +3,8 @@
     const btnAbrir = document.querySelector(".btnAbrir");
     
     btnAbrir.addEventListener("click", function() {
-        if (audio.paused) {
-            audio.play();
+        if (audioFundo.paused) {
+            audioFundo.play();
         }
     });
 // });
