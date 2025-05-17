@@ -1,6 +1,6 @@
 const caixaBtnVoltaAoTopo = document.querySelector(".caixaBtnVoltaAoTopo");
 const elementoMonitorado = window;
-const posicaoExibicao = 640;
+const posicaoExibicao = 1280;
 
 elementoMonitorado.addEventListener("scroll", function() {
     if (window.pageYOffset > posicaoExibicao) {

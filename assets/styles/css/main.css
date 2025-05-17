@@ -1,0 +1,553 @@
+/* ===============================
+    Importing [ Main Styling ]    
+=============================== */
+/* ========================
+    Importing [ Tools ]    
+======================== */
+section.parabens, section.final, section.felicitacoes, section.discurso, section.carta, .modalAbrir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+section.parabens div.conteudo, section.felicitacoes div.conteudo, section.discurso div.conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  height: 75%;
+  max-height: 484px;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: rgb(242.25, 242.25, 242.25);
+  transition: 0.75s;
+}
+
+section.parabens div.conteudo div.imagem, section.felicitacoes div.conteudo div.imagem, section.discurso div.conteudo div.imagem {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.parabens div.conteudo article.mensagem h2.pageTitle, section.felicitacoes div.conteudo article.mensagem h2.pageTitle, section.discurso div.conteudo article.mensagem h2.pageTitle {
+  font: 700 2rem "Coiny", serif;
+  text-transform: uppercase;
+  height: 2.5rem;
+  color: #111111;
+}
+
+section.parabens div.conteudo article.mensagem p.text, section.felicitacoes div.conteudo article.mensagem p.text, section.discurso div.conteudo article.mensagem p.text, section.carta div.conteudo article.mensagem .text {
+  font: 400 1rem "Poppins", serif;
+  line-height: 1.66rem;
+  text-align: justify;
+  color: #808080;
+}
+
+section.parabens div.conteudo article.mensagem a.link p.textLink, section.felicitacoes div.conteudo article.mensagem a.link p.textLink, section.discurso div.conteudo article.mensagem a.link p.textLink, section.carta div.conteudo a.link p.textLink {
+  font: 700 1rem "Poppins", serif;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* =====================================
+    Importing [ Components Styling ]    
+===================================== */
+.modalAbrir {
+  background-color: #111111;
+}
+.modalAbrir .btnAbrir {
+  width: fit-content;
+  padding: 1rem 3rem;
+  background-color: #750089;
+  border: none;
+  border-radius: 0.75rem;
+  margin: 0 auto;
+  transition: 0.33s;
+  font: 700 2rem "Poppins", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.modalAbrir .btnAbrir:hover {
+  box-shadow: 0 0 15px 0 rgb(219.1605839416, 9.5, 255);
+  background-color: rgb(219.1605839416, 9.5, 255);
+}
+
+.btnProximo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 200px;
+  height: 50px;
+  background-color: #111111;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.caixaBtnVoltaAoTopo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 0.5rem;
+  transition: ease-in-out 2s;
+  position: fixed;
+  top: -100%;
+  z-index: 10;
+}
+.caixaBtnVoltaAoTopo.visivel {
+  top: 1rem;
+}
+.caixaBtnVoltaAoTopo .btnVoltaAoTopo {
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  margin: 0 auto;
+  text-decoration: none;
+  font: 700 0.75rem "Poppins", serif;
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  border-radius: 99px;
+  color: #111111;
+  transition: 0.33s;
+  box-shadow: 0px 0px 5px 1px #ffffff;
+}
+.caixaBtnVoltaAoTopo .btnVoltaAoTopo:hover {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: auto;
+}
+body * {
+  overflow: hidden;
+}
+body img {
+  object-fit: contain;
+}
+
+.container {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 2.5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1440px;
+  }
+}
+
+.rowReverse {
+  flex-direction: row-reverse !important;
+}
+
+section.carta div.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: rgb(242.25, 242.25, 242.25);
+  position: relative;
+  z-index: 1;
+}
+section.carta div.conteudo article.mensagem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+  width: 100%;
+  height: 100%;
+}
+section.carta div.conteudo article.mensagem .text {
+  width: 50%;
+  height: auto;
+  text-align: justify;
+}
+section.carta div.conteudo a.link {
+  min-height: 50px;
+  text-decoration: none;
+  transition: 0.33s;
+}
+section.carta div.conteudo a.link:hover {
+  background-color: rgb(122.5, 0, 0);
+  box-shadow: inset 0px 0px 20px 0px #c70000;
+}
+section.carta img.carta {
+  transition: 1s;
+  position: absolute;
+  z-index: 0;
+}
+section.carta img.cartaEsqCima {
+  width: 17%;
+  height: auto;
+  transition: 1s;
+  rotate: 30deg;
+  top: 3.5rem;
+  left: -3rem;
+}
+section.carta img.cartaDirCima {
+  width: 12%;
+  height: auto;
+  transition: 1s;
+  rotate: -10deg;
+  top: 3rem;
+  right: 8rem;
+}
+section.carta img.cartaEsqBaixo {
+  width: 10%;
+  height: auto;
+  transition: 1s;
+  rotate: 10deg;
+  left: 20rem;
+  bottom: 3rem;
+  z-index: 1;
+}
+section.carta img.cartaDirBaixo {
+  width: 18%;
+  height: auto;
+  transition: 1s;
+  rotate: -30deg;
+  right: 15rem;
+  bottom: 0;
+  z-index: 1;
+}
+section.carta img.lotus {
+  width: 20%;
+  height: auto;
+  left: -1rem;
+  bottom: -3rem;
+  transition: 1s;
+  position: absolute;
+  z-index: 1;
+}
+section.carta img.lirio {
+  width: 30%;
+  height: auto;
+  right: -10rem;
+  bottom: -5rem;
+  transition: 1s;
+  position: absolute;
+  z-index: 1;
+}
+
+section.discurso div.conteudo {
+  z-index: 1;
+}
+section.discurso div.conteudo div.imagem {
+  min-width: 350px;
+  height: 100%;
+  border-radius: 0.75rem;
+  box-shadow: inset 0px 0px 0px 3px #111111;
+}
+section.discurso div.conteudo article.mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 25px 0px rgba(51, 51, 51, 0.2509803922);
+  position: relative;
+  z-index: 0;
+}
+section.discurso div.conteudo article.mensagem a.link {
+  text-decoration: none;
+  transition: 0.33s;
+}
+section.discurso div.conteudo article.mensagem a.link:hover {
+  background-color: rgb(0, 64.8291457286, 97);
+  box-shadow: inset 0px 0px 20px 0px #0085c7;
+}
+section.discurso img.estrela {
+  position: absolute;
+  transition: 1s;
+  z-index: 1;
+}
+section.discurso img.estrelaEsq {
+  width: 8%;
+  height: auto;
+  transition: 1s;
+  rotate: 65deg;
+  left: -1.5rem;
+}
+section.discurso img.estrelaDir {
+  width: 15%;
+  height: auto;
+  transition: 1s;
+  rotate: 55deg;
+  right: -4rem;
+  bottom: -1.5rem;
+}
+section.discurso img.estrelas {
+  position: absolute;
+  transition: 1s;
+  z-index: 1;
+}
+section.discurso img.estrelasCima {
+  width: 15%;
+  height: auto;
+  transition: 1s;
+  rotate: -25deg;
+  top: -2rem;
+  left: 12rem;
+  z-index: 0;
+}
+section.discurso img.estrelasBaixo {
+  width: 10%;
+  height: auto;
+  transition: 1s;
+  rotate: 205deg;
+  left: 15rem;
+  bottom: 0;
+}
+section.discurso img.estrelasDir {
+  width: 12%;
+  height: auto;
+  transition: 1s;
+  rotate: -20deg;
+  right: -1rem;
+  top: 10rem;
+}
+section.discurso img.estrelasBrilhantes {
+  position: absolute;
+  transition: 1s;
+  z-index: 1;
+}
+section.discurso img.estrelasBrilhantesEsq {
+  width: 50%;
+  height: auto;
+  transition: 1s;
+  top: 0;
+  left: -2rem;
+}
+section.discurso img.estrelasBrilhantesDir {
+  width: 50%;
+  height: auto;
+  transition: 1s;
+  rotate: 180deg;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+section.felicitacoes div.conteudo {
+  z-index: 1;
+}
+section.felicitacoes div.conteudo div.imagem {
+  min-width: 350px;
+  height: 100%;
+  border-radius: 0.75rem;
+  box-shadow: inset 0px 0px 0px 3px #111111;
+}
+section.felicitacoes div.conteudo article.mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 25px 0px rgba(51, 51, 51, 0.2509803922);
+  position: relative;
+  z-index: 0;
+}
+section.felicitacoes div.conteudo article.mensagem a.link {
+  text-decoration: none;
+  transition: 0.33s;
+}
+section.felicitacoes div.conteudo article.mensagem a.link:hover {
+  background-color: rgb(153, 133.2, 0);
+  box-shadow: inset 0px 0px 20px 0px #ffde00;
+}
+section.felicitacoes img.laco {
+  width: 30%;
+  height: auto;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+section.felicitacoes img.presenteEsq {
+  width: 15%;
+  height: auto;
+  rotate: -25deg;
+  transition: 1s;
+  position: absolute;
+  left: -1rem;
+  bottom: 25px;
+  z-index: 0;
+}
+section.felicitacoes img.presenteDir {
+  width: 15%;
+  height: auto;
+  rotate: 25deg;
+  transition: 1s;
+  position: absolute;
+  top: -2rem;
+  right: 25rem;
+  z-index: 0;
+}
+section.felicitacoes img.presentes {
+  width: 25%;
+  height: auto;
+  transition: 1s;
+  position: absolute;
+  right: -3rem;
+  bottom: -2rem;
+  z-index: 1;
+}
+
+section.final div.fundoOfuscado {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 1920px 192px #000000;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  position: absolute;
+}
+section.final div.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  height: 60%;
+}
+section.final div.conteudo div.carrosel {
+  width: 66%;
+  height: 100%;
+  overflow: hidden;
+}
+section.final div.conteudo div.carrosel div.carrosel-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  overflow: initial;
+}
+section.final div.conteudo div.carrosel div.carrosel-content div.slide {
+  box-sizing: border-box;
+  min-width: 100%;
+  padding: 20px;
+  font: 700 2rem "Coiny", serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+section.final div.conteudo div.carrosel button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(64.25, 64.25, 64.25);
+  border: none;
+  border-radius: 99px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+section.final div.conteudo div.carrosel button:hover {
+  background-color: rgb(38.75, 38.75, 38.75);
+}
+section.final div.conteudo div.carrosel button#prev {
+  left: 10rem;
+}
+section.final div.conteudo div.carrosel button#next {
+  right: 10rem;
+}
+
+section.parabens div.conteudo div.imagem {
+  min-width: 350px;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 0.75rem;
+  box-shadow: inset 0px 0px 0px 3px #111111;
+}
+section.parabens div.conteudo article.mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 25px 0px rgba(51, 51, 51, 0.2509803922);
+}
+section.parabens div.conteudo article.mensagem a.link {
+  text-decoration: none;
+  transition: 0.33s;
+}
+section.parabens div.conteudo article.mensagem a.link:hover {
+  background-color: #750089;
+  box-shadow: inset 0px 0px 20px 0px rgb(219.1605839416, 9.5, 255);
+}
+section.parabens img.baloesQuina {
+  width: 50%;
+  height: auto;
+  transition: 1s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+section.parabens img.baloes {
+  width: 25%;
+  height: auto;
+  transition: 1s;
+  position: absolute;
+  right: -7rem;
+  bottom: -10rem;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

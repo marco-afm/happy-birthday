@@ -1,0 +1,27 @@
+@use 'sass:color' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+%defaultSectionStyle {
+    @include flexAlignContent(row, center, center, 0);
+    @include size(100%, 100vh);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+%defaultContentStyle {
+    @include flexAlignContent(row, space-between, center, 2.5rem);
+    height: 75%;
+    max-height: 484px;
+    border-radius: .75rem;
+    box-shadow: 0px 0px 25px 0px #00000040;
+    background-color: adjust($white, $lightness: -5%);
+    transition: .75s;
+}   
+
+%bgImageCenter {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

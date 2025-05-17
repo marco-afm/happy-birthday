@@ -1,0 +1,98 @@
+@use '../tools.scss' as *;
+
+section.carta {
+    @extend %defaultSectionStyle;
+
+    div.conteudo {
+        @include flexAlignContent(column, space-between, center, 1.5rem);
+        padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+        border-radius: .75rem;
+        box-shadow: 0px 0px 25px 0px #00000040;
+        background-color: adjust($white, $lightness: -5%);
+
+        position: relative;
+        z-index: 1;
+
+        article.mensagem {
+            @include flexAlignContent(row, space-between, null, 2.5rem);
+            @include size(100%, 100%);
+            
+            .text {
+                @extend %ftText;
+                @include size(50%, auto);
+                text-align: justify;
+            }
+        }
+
+        a.link {
+            min-height: 50px;
+            text-decoration: none;
+            transition: .33s;
+            
+            &:hover {
+                background-color: $darkColorFour;
+                box-shadow: inset 0px 0px 20px 0px $colorFour;
+            }
+
+            p.textLink {
+                @extend %ftLink;
+            }
+        }
+    }
+
+    img.carta {
+        transition: 1s;
+        position: absolute;
+        z-index: 0;
+    }    
+    img.cartaEsqCima {
+        @include size(17%, auto);
+        transition: 1s;
+        rotate: 30deg;
+        top: 3.5rem;
+        left: -3rem;
+    }
+    img.cartaDirCima {
+        @include size(12%, auto);
+        transition: 1s;
+        rotate: -10deg;
+        top: 3rem;
+        right: 8rem;
+    }
+    img.cartaEsqBaixo {
+        @include size(10%, auto);
+        transition: 1s;
+        rotate: 10deg;
+        left: 20rem;
+        bottom: 3rem;
+        z-index: 1;
+    }
+    img.cartaDirBaixo {
+        @include size(18%, auto);
+        transition: 1s;
+        rotate: -30deg;
+        right: 15rem;
+        bottom: 0;
+        z-index: 1;
+    }
+
+
+    img.lotus {
+        @include size(20%, auto);
+        left: -1rem;
+        bottom: -3rem;
+        
+        transition: 1s;
+        position: absolute;
+        z-index: 1;
+    }
+    img.lirio {
+        @include size(30%, auto);
+        right: -10rem;
+        bottom: -5rem;
+        
+        transition: 1s;
+        position: absolute;
+        z-index: 1;
+    }
+}

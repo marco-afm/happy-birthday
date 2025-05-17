@@ -1,0 +1,10 @@
+
+• Nesta pasta deve estar presente a implementação de ferramentas que serão utilizadas para estilizar o site de forma mais rápida e eficiente.
+
+Ex.:
+
+/tools/
+    _mixins.scss
+    _placeholders.scss
+    _typography.scss
+    _variables.scss

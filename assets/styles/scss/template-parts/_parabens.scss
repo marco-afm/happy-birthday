@@ -1,0 +1,69 @@
+@use '../tools.scss' as *;
+
+section.parabens {
+    @extend %defaultSectionStyle;
+
+    div.conteudo {
+        @extend %defaultContentStyle;
+
+        div.imagem {
+            min-width: 350px;
+            height: 100%;
+            max-height: 100%;
+            @extend %bgImageCenter;
+            border-radius: .75rem;
+            box-shadow: inset 0px 0px 0px 3px $black;
+        }
+
+        article.mensagem {
+            @include flexAlignContent(column, space-between, null, 0);
+            @include size(100%, 100%);
+            position: relative;
+            padding: 2rem;
+
+            background-color: $white;
+            border-radius: .75rem;
+            box-shadow: 0px 0px 25px 0px #33333340;
+
+            h2.pageTitle {
+                @extend %ftTitle;
+            }
+
+            p.text {
+                @extend %ftText;
+            }
+
+            a.link {
+                text-decoration: none;
+                transition: .33s;
+
+                &:hover {
+                    background-color: $colorOne;
+                    box-shadow: inset 0px 0px 20px 0px $lightColorOne;
+                }
+
+                p.textLink {
+                    @extend %ftLink;
+                }
+            }
+        }
+    }
+
+    img.baloesQuina {
+        @include size(50%, auto);
+        transition: 1s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    img.baloes {
+        @include size(25%, auto);
+        transition: 1s;
+        position: absolute;
+        right: -7rem;
+        bottom: -10rem;
+        z-index: 1;
+    }
+}

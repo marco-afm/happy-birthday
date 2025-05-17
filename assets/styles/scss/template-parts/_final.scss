@@ -1,0 +1,70 @@
+@use '../tools.scss' as *;
+
+section.final {
+    @extend %defaultSectionStyle;
+    
+    div.fundoOfuscado {
+        @include size(100%, 100%);
+        box-shadow: inset 0px 0px 1920px 192px #000000;
+        background-color: #00000080;
+        position: absolute;
+    }
+
+    div.conteudo {
+        @include flexAlignContent(column, space-between, center, 1rem);
+        position: relative;
+        z-index: 1;
+        height: 60%;
+
+        div.carrosel {
+            @include size(66%, 100%);
+            overflow: hidden;
+        
+            div.carrosel-content {
+                @include flexAlignContent(row, null, center, 0);
+                @include size(100%, 100%);
+                transition: transform 0.5s ease-in-out;
+                overflow: initial;
+
+                div.slide {
+                    box-sizing: border-box;
+                    min-width: 100%;
+                    padding: 20px;
+                    
+                    font: 700 2rem $ftTitle;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: $white;
+                }
+            }
+        
+            button {
+                @include flexAlignContent(row, center, center, 0);
+                @include size(2rem, 2rem);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                
+                background-color: adjust($darkGray, $lightness: -10%);
+                border: none;
+                border-radius: 99px;
+                
+                color: $white;
+                cursor: pointer;
+                transition: .25s;
+            
+                &:hover {
+                    background-color: adjust($darkGray, $lightness: -20%);
+                }
+            }
+            
+            button#prev {
+                left: 10rem;
+            }
+            
+            button#next {
+                right: 10rem;
+            }
+        }
+    }
+}

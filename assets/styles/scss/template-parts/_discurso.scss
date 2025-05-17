@@ -1,0 +1,129 @@
+@use '../tools.scss' as *;
+
+section.discurso {
+    @extend %defaultSectionStyle;
+
+    div.conteudo {
+        @extend %defaultContentStyle;
+        z-index: 1;
+
+        div.imagem {
+            min-width: 350px;
+            height: 100%;
+            @extend %bgImageCenter;
+            border-radius: .75rem;
+            box-shadow: inset 0px 0px 0px 3px $black;
+        }
+
+        article.mensagem {
+            @include flexAlignContent(column, space-between, null, 0);
+            @include size(100%, 100%);
+            padding: 2rem;
+
+            background-color: $white;
+            border-radius: .75rem;
+            box-shadow: 0px 0px 25px 0px #33333340;
+
+            position: relative;
+            z-index: 0;
+
+            h2.pageTitle {
+                @extend %ftTitle;
+            }
+
+            p.text {
+                @extend %ftText;
+            }
+
+            a.link {
+                text-decoration: none;
+                transition: .33s;
+
+                &:hover {
+                    background-color: $darkColorThree;
+                    box-shadow: inset 0px 0px 20px 0px $colorThree;
+                }
+
+                p.textLink {
+                    @extend %ftLink;
+                }
+            }
+        }
+    }
+
+    img.estrela {
+        position: absolute;
+        transition: 1s;
+        z-index: 1;
+    }
+
+    img.estrelaEsq {
+        @include size(8%, auto);
+        transition: 1s;
+        rotate: 65deg;
+        left: -1.5rem;
+    }
+
+    img.estrelaDir {
+        @include size(15%, auto);
+        transition: 1s;
+        rotate: 55deg;
+        right: -4rem;
+        bottom: -1.5rem;
+    }
+
+
+    img.estrelas {
+        position: absolute;
+        transition: 1s;
+        z-index: 1;
+    }
+
+    img.estrelasCima {
+        @include size(15%, auto);
+        transition: 1s;
+        rotate: -25deg;
+        top: -2rem;
+        left: 12rem;
+        z-index: 0;
+    }
+
+    img.estrelasBaixo {
+        @include size(10%, auto);
+        transition: 1s;
+        rotate: 205deg;
+        left: 15rem;
+        bottom: 0;
+    }
+
+    img.estrelasDir {
+        @include size(12%, auto);
+        transition: 1s;
+        rotate: -20deg;
+        right: -1rem;
+        top: 10rem;
+    }
+
+
+    img.estrelasBrilhantes {
+        position: absolute;
+        transition: 1s;
+        z-index: 1;
+    }
+
+    img.estrelasBrilhantesEsq {
+        @include size(50%, auto);
+        transition: 1s;
+        top: 0;
+        left: -2rem;
+    }
+
+    img.estrelasBrilhantesDir {
+        @include size(50%, auto);
+        transition: 1s;
+        rotate: 180deg;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+}

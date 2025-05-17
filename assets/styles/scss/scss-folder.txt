@@ -1,0 +1,54 @@
+
+• Nesta pasta deve estar presente os arquivos principais que importarão os arquivos abstracts que contém as estilizações das sessões do site.
+
+Ex.:
+
+/scss/
+    /components/
+    /template-parts/
+    /tools/
+    main.scss          |-- Neste arquivo você deve importar todos os arquivos de estilizações das estruturas do site --|
+    tools.scss         |-- Neste arquivo você deve importar todas os arquivos de ferramentas que serão utilizadas para estilizar o site --|
+
+
+-------------------- // --------------------
+
+
+Exemplo de uso:
+
+*Arquivo de importação* -> [main.scss]
+
+assets > styles > scss > main.scss [
+    1   @use 'template-parts/base';
+    2   @use 'template-parts/header';
+    3   @use 'template-parts/section1';
+    4   @use 'template-parts/section2';
+    5   @use 'template-parts/footer';
+]
+
+
+-------------------- // --------------------
+
+
+Exemplo de uso:
+
+*Arquivo de importação* -> [tools.scss]
+
+assets > styles > scss > tools.scss [
+    1   @forward 'tools/mixins';
+    2   @forward 'tools/placeholders';
+    3   @forward 'tools/typography';
+    4   @forward 'tools/variables';
+]
+
+
+-------------------- // --------------------
+
+
+Exemplo de uso:
+
+*Arquivo de estilização* -> Ex.: [_header.scss]
+
+assets > styles > scss > main > _header.scss [
+    1   @use '../tools.scss' as *; // Para conseguir utilizar todas as ferramentas neste arquivo durante a estilização
+]

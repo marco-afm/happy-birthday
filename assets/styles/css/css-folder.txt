@@ -1,0 +1,10 @@
+
+• Nesta pasta deve estar presente todos os arquivos de css que serão compilados.
+
+Ex.:
+
+/css/
+    main.css
+    main.css.map
+    tools.css
+    tools.css.map

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imagex/png" href="assets/img/iconeCoracaoAba.png">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/icons/iconeCoracaoAba.png">
 
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,20 +15,22 @@
     <title>03 de Março - Happy Birthday!</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/estruturas/estruturas.css">
-    <link rel="stylesheet" href="assets/css/ferramentas/ferramentas.css">
+    <link rel="stylesheet" href="assets/styles/css/main.css">
 
-    <script  type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.e15ace8ccace5398a721ffec81f121de.js"></script>
-    <script  type="text/javascript" src="https://codesandbox.io/static/js/banner.d9cb10a38.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.e15ace8ccace5398a721ffec81f121de.js"></script>
+    <script type="text/javascript" src="https://codesandbox.io/static/js/banner.d9cb10a38.js"></script>
 </head>
 
 <body>
     <div class="modalAbrir">
-        <button class="btnAbrir" id="btnAbrir">Abrir!</button>
+        <a href="#parabens" class="btnAbrir">Clique aqui!</a>
     </div>
     
     <audio id="audioFundo" loop>
-        <source src="assets/audio/feliz-aniversario.mp3" type="audio/mpeg">
+        <source src="assets/audios/feliz-aniversario.mp3" type="audio/mpeg">
     </audio>
     
     <div class="caixaBtnVoltaAoTopo">
@@ -36,12 +38,12 @@
     </div>
     
     <!-- PARABÉNS -->
-    <section class="parabens" id="parabens" style="background-image: url('assets/img/fundoParabens.png');">
-        <div class="container conteudo">
-            <div class="imagem" style="background-image: url('assets/img/destaque1.jpeg');"></div>
+    <section class="parabens" id="parabens" style="background-image: url('assets/img/backgrounds/fundoParabens.png');">
+        <div class="container conteudo" data-aos="fade-up">
+            <div class="imagem" style="background-image: url('../../../../assets/img/images/destaque1.jpeg');"></div>
 
             <article class="mensagem">
-                <h2 class="pageTitle">Parabéns, Anna!!! 🎉🎉🎉</h2>
+                <h2 class="pageTitle">Parabéns, Anna!!! 🥳🎂🎉</h2>
                 
                 <p class="text">Feliz aniversário, meu amor! Hoje é um dia muito especial porque foi nele que o mundo ganhou alguém tão incrível quanto você. Você não sabe como sou grato por te ter ao meu lado, iluminando minha vida com seu sorriso e seu jeito único de ser. Que seu dia seja tão lindo e especial quanto você, princesa, cheio de amor, felicidade e momentos inesquecíveis. Eu te amo muito!</p>
 
@@ -52,18 +54,18 @@
         </div>
 
         <!-- *Imagens Decorativas* -->
-        <img src="assets/img/baloesQuina.png " alt="" class="baloesQuina">
-        <img src="assets/img/baloes.png " alt="" class="baloes">
+        <img src="assets/img/images/baloesQuina.png" data-aos="fade-right" alt="imgBalõesDeQuina" class="baloesQuina">
+        <img src="assets/img/images/baloes.png" data-aos="fade-left" alt="imgBalões" class="baloes">
     </section>
 
     <!-- FELICITAÇÕES -->
-    <section class="felicitacoes" id="felicitacoes" style="background-image: url('assets/img/fundoFelicitacoes.png');">
-        <div class="container conteudo bgBlue rowReverse">
-            <div class="imagem" style="background-image: url('assets/img/destaque2.jpeg');"></div>
+    <section class="felicitacoes" id="felicitacoes" style="background-image: url('assets/img/backgrounds/fundoFelicitacoes.png');">
+        <div class="container conteudo rowReverse" data-aos="fade-up">
+            <div class="imagem" style="background-image: url('../../../../assets/img/images/destaque2.jpeg');"></div>
             
             <article class="mensagem">
                 
-                <h2 class="pageTitle">Tudo de bom!!! ✨✨✨</h2>
+                <h2 class="pageTitle">Tudo de bom!!! 😁🎁✨</h2>
                 
                 <p class="text">Que neste novo ciclo, todos os seus sonhos se realizem e que a felicidade caminhe ao seu lado todos os dias. Você merece tudo de melhor que a vida tem a oferecer: amor, sucesso, saúde e muitas conquistas! Espero estar sempre aqui para celebrar cada vitória com você. Aproveite seu dia ao máximo, meu amor, porque ele é todo seu! Parabéns!</p>
 
@@ -74,19 +76,19 @@
         </div>
 
         <!-- *Imagens Decorativas* -->
-        <img src="assets/img/laco.png " alt="" class="laco">
-        <img src="assets/img/presente.png " alt="" class="presenteEsq">
-        <img src="assets/img/presente.png " alt="" class="presenteDir">
-        <img src="assets/img/presentes.png " alt="" class="presentes">
+        <img src="assets/img/images/laco.png" data-aos="fade-right" alt="" class="laco">
+        <img src="assets/img/images/presente.png" data-aos="fade-right" alt="" class="presenteEsq">
+        <img src="assets/img/images/presente.png" data-aos="fade-down" alt="" class="presenteDir">
+        <img src="assets/img/images/presentes.png" data-aos="fade-up" alt="" class="presentes">
     </section>
 
     <!-- DISCURSO -->
-    <section class="discurso" id="discurso" style="background-image: url('assets/img/fundoDiscurso.png');">
-        <div class="container conteudo">
-            <div class="imagem" style="background-image: url('assets/img/destaque3.jpeg');"></div>
+    <section class="discurso" id="discurso" style="background-image: url('assets/img/backgrounds/fundoDiscurso.png');">
+        <div class="container conteudo" data-aos="fade-up">
+            <div class="imagem" style="background-image: url('../../../../assets/img/images/destaque3.jpeg');"></div>
 
             <article class="mensagem">
-                <h2 class="pageTitle">Você é incrível!!! 🩵🩵🩵</h2>
+                <h2 class="pageTitle">Você é incrível!!! 🤩💎💙</h2>
                 
                 <p class="text">E não tem como falar de você sem exaltar o quanto você é extraordinária, né?! Sua inteligência me inspira, sua doçura encanta, e sua gentileza ilumina o mundo ao seu redor. Você é linda em cada detalhe, na sua delicadeza, no seu jeito agradável de ser e na alegria que transmite. Estar ao seu lado é um privilégio, porque você é simplesmente perfeita! Nunca se esqueça do quanto você é especial e do quanto eu te admiro, tá?</p>
 
@@ -97,20 +99,20 @@
         </div>
 
         <!-- *Imagens Decorativas* -->
-        <img src="assets/img/estrela.png" alt="" class="estrelaEsq estrela">
-        <img src="assets/img/estrela.png" alt="" class="estrelaDir estrela">
+        <img src="assets/img/images/estrela.png" data-aos="fade-up" alt="" class="estrelaEsq estrela">
+        <img src="assets/img/images/estrela.png" data-aos="fade-left" alt="" class="estrelaDir estrela">
 
-        <img src="assets/img/estrelas.png" alt="" class="estrelasCima estrelas">
-        <img src="assets/img/estrelas.png" alt="" class="estrelasBaixo estrelas">
-        <img src="assets/img/estrelas.png" alt="" class="estrelasDir estrelas">
+        <img src="assets/img/images/estrelas.png" data-aos="fade-down" alt="" class="estrelasCima estrelas">
+        <img src="assets/img/images/estrelas.png" data-aos="fade-down" alt="" class="estrelasBaixo estrelas">
+        <img src="assets/img/images/estrelas.png" data-aos="fade-left" alt="" class="estrelasDir estrelas">
 
-        <img src="assets/img/estrelasBrilhantes.png" alt="" class="estrelasBrilhantesEsq estrelasBrilhantes">
-        <img src="assets/img/estrelasBrilhantes.png" alt="" class="estrelasBrilhantesDir estrelasBrilhantes">
+        <img src="assets/img/images/estrelasBrilhantes.png" data-aos="fade-down" alt="" class="estrelasBrilhantesEsq estrelasBrilhantes">
+        <img src="assets/img/images/estrelasBrilhantes.png" data-aos="fade-down" alt="" class="estrelasBrilhantesDir estrelasBrilhantes">
     </section>
 
     <!-- CARTA -->
-    <section class="carta" id="carta" style="background-image: url('assets/img/fundoCarta.png');">
-        <div class="container conteudo">
+    <section class="carta" id="carta" style="background-image: url('assets/img/backgrounds/fundoCarta.png');">
+        <div class="container conteudo" data-aos="fade-up">
             <article class="mensagem">
                 <p class="text">Depois de tudo que já te disse, ainda sinto que as palavras nunca serão suficientes para expressar o tamanho do meu amor por você. Mas quero tentar, porque você merece ouvir, sentir e lembrar todos os dias o quanto é incrível. Eu olho para você e vejo a pessoa mais especial que já conheci. Você é inteligente de um jeito que me fascina, tem uma doçura que aquece meu coração e uma gentileza que transforma o mundo ao seu redor. Você é linda não só por fora, mas em cada gesto, em cada palavra, em cada atitude. Sua delicadeza torna tudo mais bonito, sua presença torna tudo mais leve, e sua alegria faz com que qualquer momento ao seu lado seja inesquecível.</p>
                 
@@ -123,20 +125,20 @@
         </div>
 
         <!-- *Imagens Decorativas* -->
-        <img src="assets/img/carta.png" alt="" class="cartaEsqCima carta">
-        <img src="assets/img/carta.png" alt="" class="cartaEsqBaixo carta">
-        <img src="assets/img/carta.png" alt="" class="cartaDirCima carta">
-        <img src="assets/img/carta.png" alt="" class="cartaDirBaixo carta">
+        <img src="assets/img/images/carta.png" data-aos="fade-right" alt="" class="cartaEsqCima carta">
+        <img src="assets/img/images/carta.png" data-aos="fade-up" alt="" class="cartaEsqBaixo carta">
+        <img src="assets/img/images/carta.png" data-aos="fade-left" alt="" class="cartaDirCima carta">
+        <img src="assets/img/images/carta.png" data-aos="fade-right" alt="" class="cartaDirBaixo carta">
 
-        <img src="assets/img/lotus.png" alt="" class="lotus">
-        <img src="assets/img/lirio.png" alt="" class="lirio">
+        <img src="assets/img/images/lotus.png" data-aos="fade-right" alt="" class="lotus">
+        <img src="assets/img/images/lirio.png" data-aos="fade-left" alt="" class="lirio">
     </section>
 
     <!-- FINAL -->
-    <section class="final" id="final" style="background-image: url('assets/img/fundoNosDois.png');">
+    <section class="final" id="final" style="background-image: url('assets/img/backgrounds/fundoNosDois.png');">
         <div class="fundoOfuscado"></div>
         
-        <div class="container conteudo">
+        <div class="container conteudo" data-aos="zoom-in">
             <div class="carrosel">
                 <div class="carrosel-content">
                     <div class="slide">♥️Eu te amo, meu amor!♥️</div>
@@ -146,16 +148,22 @@
                     <div class="slide">♥️Tudo sobre mim ama tudo sobre você!♥️</div>
                     <div class="slide">♥️Feliz aniversário, mô!♥️</div>
                 </div>
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
+                <button id="prev" title="Voltar">&#10094;</button>
+                <button id="next" title="Avançar">&#10095;</button>
             </div>
         </div>
     </section>
 
     <script src="assets/js/carroselDeFrases.js"></script>
     <script src="assets/js/voltaAoTopo.js"></script>
-    <script src="assets/js/iniciaAudio.js"></script>
+    <!-- <script src="assets/js/iniciaAudio.js"></script> -->
     <script src="assets/js/btnAbreSite.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

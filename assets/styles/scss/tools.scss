@@ -1,0 +1,11 @@
+/* ========================
+    Importing [ Tools ]    
+======================== */
+
+@forward 'sass:color'; // disponibiliza o módulo 'color' para os arquivos que importarem 'tools.scss'
+@forward 'sass:string'; // disponibiliza o módulo 'string' para os arquivos que importarem 'tools.scss'
+
+@forward 'tools/mixins';
+@forward 'tools/placeholders';
+@forward 'tools/typography';
+@forward 'tools/variables';

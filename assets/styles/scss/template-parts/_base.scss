@@ -1,0 +1,47 @@
+@use '../tools.scss' as *;
+
+
+/* =====================================
+    Importing [ Components Styling ]    
+===================================== */
+@use '../components/buttons';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: .25s;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: auto;
+    
+    * {
+        overflow: hidden;
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.container {
+    margin: 0 auto;
+
+    @include LAPTOP {
+        width: 1024px;
+        padding: 2.5rem;
+    }
+    @include DESKTOP {
+        width: 1440px;
+    }
+}
+
+.rowReverse {
+    flex-direction: row-reverse !important;
+}

@@ -1,0 +1,26 @@
+@use 'sass:color' as *;
+
+// ====== Colors ====== //
+$black: #111111;
+$white: #ffffff;
+
+$gray: #808080;
+$darkGray: adjust($gray, $lightness: -15%);
+$lightGray: adjust($gray, $lightness: 15%);
+
+$colorOne: #750089;
+$lightColorOne: adjust($colorOne, $lightness: 25%);
+
+$colorTwo: #ffde00;
+$darkColorTwo: adjust($colorTwo, $lightness: -20%);
+
+$colorThree: #0085c7;
+$darkColorThree: adjust($colorThree, $lightness: -20%);
+
+$colorFour: #c70000;
+$darkColorFour: adjust($colorFour, $lightness: -15%);
+
+
+// ======= Fonts ====== //
+$ftTitle: "Coiny", serif;
+$ftText: "Poppins", serif;

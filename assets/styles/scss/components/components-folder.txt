@@ -1,0 +1,10 @@
+
+• Nesta pasta deve estar presente a estilização de cada componente do site (que será reutilizado) separados por arquivos.
+
+Ex.:
+
+/components/
+    _ctaButton.scss
+    _miniForm.scss
+    _navigation.scss
+    _socialMedia.scss
